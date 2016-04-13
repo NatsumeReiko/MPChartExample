@@ -36,6 +36,7 @@ import com.xxmassdeveloper.mpchartexample.PerformanceLineChart;
 import com.xxmassdeveloper.mpchartexample.PieChartActivity;
 import com.xxmassdeveloper.mpchartexample.PiePolylineChartActivity;
 import com.xxmassdeveloper.mpchartexample.R;
+import com.xxmassdeveloper.mpchartexample.RadarChart01Activitry;
 import com.xxmassdeveloper.mpchartexample.RadarChartActivitry;
 import com.xxmassdeveloper.mpchartexample.RealtimeLineChartActivity;
 import com.xxmassdeveloper.mpchartexample.ScatterChartActivity;
@@ -43,8 +44,6 @@ import com.xxmassdeveloper.mpchartexample.ScrollViewActivity;
 import com.xxmassdeveloper.mpchartexample.StackedBarActivity;
 import com.xxmassdeveloper.mpchartexample.StackedBarActivityNegative;
 import com.xxmassdeveloper.mpchartexample.fragments.SimpleChartDemo;
-import com.xxmassdeveloper.mpchartexample.realm.RealmDatabaseActivityBar;
-import com.xxmassdeveloper.mpchartexample.realm.RealmDatabaseActivityLine;
 import com.xxmassdeveloper.mpchartexample.realm.RealmMainActivity;
 
 import java.util.ArrayList;
@@ -135,6 +134,10 @@ public class MainActivity extends Activity implements OnItemClickListener {
                 "This demonstrates how to use this library with Realm.io mobile database.");
         realm.isNew = true;
         objects.add(realm);
+
+        objects.add(new ContentItem(
+                "my radar chart",
+                "for coffee"));
 
         MyAdapter adapter = new MyAdapter(this, objects);
 
@@ -232,6 +235,10 @@ public class MainActivity extends Activity implements OnItemClickListener {
                 break;
             case 20:
                 i = new Intent(this, RadarChartActivitry.class);
+                startActivity(i);
+                break;
+            case 29:
+                i = new Intent(this, RadarChart01Activitry.class);
                 startActivity(i);
                 break;
             case 21:
