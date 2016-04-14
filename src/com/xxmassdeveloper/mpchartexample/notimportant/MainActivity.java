@@ -44,6 +44,7 @@ import com.xxmassdeveloper.mpchartexample.ScrollViewActivity;
 import com.xxmassdeveloper.mpchartexample.StackedBarActivity;
 import com.xxmassdeveloper.mpchartexample.StackedBarActivityNegative;
 import com.xxmassdeveloper.mpchartexample.fragments.SimpleChartDemo;
+import com.xxmassdeveloper.mpchartexample.google.GPieActivity;
 import com.xxmassdeveloper.mpchartexample.realm.RealmMainActivity;
 
 import java.util.ArrayList;
@@ -137,6 +138,10 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
         objects.add(new ContentItem(
                 "my radar chart",
+                "for coffee"));
+
+        objects.add(new ContentItem(
+                "google pie chart",
                 "for coffee"));
 
         MyAdapter adapter = new MyAdapter(this, objects);
@@ -271,6 +276,10 @@ public class MainActivity extends Activity implements OnItemClickListener {
                 break;
             case 28:
                 i = new Intent(this, RealmMainActivity.class);
+                startActivity(i);
+                break;
+            case 30:
+                i = new Intent(this, GPieActivity.class);
                 startActivity(i);
                 break;
         }
