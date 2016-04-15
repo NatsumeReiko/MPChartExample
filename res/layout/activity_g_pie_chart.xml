@@ -19,12 +19,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.xxmassdeveloper.mpchartexample.google.Step001Circle
+    <com.xxmassdeveloper.mpchartexample.google.Step002Circles
         android:id="@+id/circle"
         android:layout_centerInParent="true"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="@android:color/holo_purple"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#fee"
         android:padding="10dp" />
 
     <com.xxmassdeveloper.mpchartexample.google.PieChart
